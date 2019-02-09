@@ -42,4 +42,8 @@
     permanent: yes
     state: enabled
 
-
+- name: 10. Restart Firewalld Service
+  systemd:
+    name: firewalld
+    state: reloaded
+   

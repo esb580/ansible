@@ -1,6 +1,6 @@
 ---
-- name: update all
-  dnf: 
-   name: "*"
-   state: latest
+#- name: update all
+#  dnf: 
+#   name: "*"
+#   state: latest
 
