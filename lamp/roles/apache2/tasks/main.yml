@@ -25,4 +25,21 @@
 - name: 6. install Hello World PHP script
   copy: src=index.php dest=/var/www/html/index.php mode=0664
 
+- name: 7. Install python3-firewall  
+  dnf:
+    name: python3-firewall
+    state: present
+
+- name: 8. Configure Firewalld - https
+  firewalld:
+    service: https
+    permanent: yes
+    state: enabled
+
+- name: 9. Configure Firewalld - http
+  firewalld:
+    service: http
+    permanent: yes
+    state: enabled
+
 
